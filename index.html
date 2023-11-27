@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description" content="Muchiri Antony - portfolio website"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="css/main.css" />
     <title>Muchiri Antony</title>
     <style>
       body.dark-mode {
-        background-color: #393b3f;
-        color: rgb(28, 28, 224);
+        background-color: #5a5c5f;
+        color: rgb(5, 5, 5);
         font-size: large;
         padding: 4px;
       }
@@ -21,8 +24,9 @@
     </style>
   </head>
   <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- Navbar -->
-    <nav class="relative container mx-auto p-6  fixed w-full top-0">
+    <nav class="relative container mx-auto p-6  fixed w-full top-0 " id="nav">
       <!-- Flex container -->
       <div class="flex items-center justify-between">
         <!-- Logo -->
@@ -30,16 +34,16 @@
           <img src="img/logo.svg" alt="" />
         </div>
         <!-- Menu Items -->
-        <div class="hidden space-x-6 md:flex">
+        <div class=" hidden space-x-6 md:flex">
           <a href="#" class="hover:text-darkGrayishBlue">Home</a>
-          <a href="#skills" class="hover:text-darkGrayishBlue">Skills</a>
           <a href="#About" class="hover:text-darkGrayishBlue">About</a>
           <a href="#projects" class="hover:text-darkGrayishBlue">Projects</a>
-          <a href="#contact" class="hover:text-darkGrayishBlue">Contact</a>
+          <a href="#section2" class="hover:text-darkGrayishBlue">Skills</a>
+          <a href="#cta" class="hover:text-darkGrayishBlue">Contact</a>
         
         </div>
         <button id="toggleButton" class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
-          Toggle Mode
+          Dark Mode
         </button>
         <!-- Hamburger Icon -->
         <button
@@ -56,12 +60,13 @@
       <div class="md:hidden">
         <div
           id="menu"
-          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+          class="absolute flex-col items-center hidden self-end py-8 mt-6 space-y-6 font-bold bg-gray-200 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
         >
           <a href="#">Home</a>
-          <a href="#Skills">Skills</a>
           <a href="#Resume">Resume</a>
           <a href="projects">Projects</a>
+          
+          <a href="#section2" class="hover:text-darkGrayishBlue">Skills</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
@@ -71,37 +76,40 @@
     <section id="hero">
       <!-- Flex Container -->
       <div
-        class="container flex flex-col-reverse items-center px-6 mx-auto mt-1 space-y-0 md:space-y-0 md:flex-row"
+        class="container flex flex-col items-center px-6 mx-auto mt-1 space-y-0 md:space-y-0 md:flex-row"
       >
         <!-- Left item -->
-        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+        <div class="flex flex-col mb-32 space-y-12">
           <h1
             class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left typing-animation overflow-hidden"
           >
             Bring everyone together to build better software products.
           </h1>
-          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
-           Hi t Manage makes it simple for software teams to plan day-to-day tasks
-            while keeping the larger team goals in view.
-          </p>
-          <div class="flex justify-center md:justify-start">
-            <span
-              href="#"
-              class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-              >Software Engineer</span>
-          </div>
+
         </div>
-        <div class="md:w-1/2 " id="comp">
-          <img src="./img/skills/computer.jpg" alt="comp" class="w-full h-full object-cover ">
+        <div class="md:w-1/2 flex flex-col mb-32 space-y-6" >
+          <div class=" text-center text-dark flex flex-col ">
+          <p class="max-w-sm px-10 mt-1">
+            Hi t Manage makes it simple for software teams to plan day-to-day tasks
+             while keeping the larger team goals in view.
+           </p>
+          </div>
+          <div class="flex justify-center md:justify-center ">
+             <span
+               href="#"
+               class="p-3 mb-10 px-10 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+               >Software Engineer</span>
+           </div>
+           
         </div>
       </div>
     </section>
 
-    <!-- about me-->
+     <!--about me-->
     <section id="features">
       <!-- Flex container -->
       <div
-        class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row " >
+        class="container flex flex-col-reverse px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row " >
         <!-- about -->
         <div class="flex flex-col space-y-3 md:w-1/2 ">
           <h2 class="max-w-md text-4xl font-bold  text-center md:text-left" id ="about">
@@ -118,8 +126,8 @@
         </div>
 
     
-        <div class="flex flex-col space-y-8 md:w-1/2" id="projects">
-          <div><h2 class="max-w-md text-4xl   text-center md:text-center">Projects</h2>
+        <div class="flex flex-col px-2 space-y-8 md:w-1/2" id="projects">
+          <div><h2 class="max-w-md text-4xl  mb-4  text-center md:text-center">Projects</h2>
           <!-- List Item 1 -->
           <div
             class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
@@ -253,14 +261,14 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="cta" class="bg-brightRed">
+    <section id="cta">
       <!-- Flex Container -->
       <div
         class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
       >
         <!-- Heading -->
         <h2
-          class="text-5xl font-bold text-center text-white md:text-4xl md:max-w-xl md:text-left"
+          class="text-5xl font-bold text-center md:text-4xl md:max-w-xl md:text-left"
         >
         Contact me
         </h2>
@@ -268,7 +276,7 @@
         <div>
           <a
             href="#"
-            class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
+            class="p-3 px-6 pt-2 text-brightRed bg-gray-300 rounded-full shadow-2xl baseline hover:bg-gray-600"
             >Say hello</a
           >
         </div>
@@ -292,7 +300,7 @@
           <div>
             
           </div>
-          <div  class="text-center text-white text-bold ">Connect with me on social media</div>
+          <div  class=" text-white text-bold "><p>Connect with me on social media</p></div>
           <!-- Social Links Container -->
           <div class=" mb:5 flex justify-center space-x-4">
             <!-- Link 1 -->

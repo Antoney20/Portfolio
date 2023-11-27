@@ -7,9 +7,11 @@ New responsive portfolio website utilizing the capabilities of Tailwind CSS in f
 
 
 # usage.
+To begin the development...
 Clone this repository locally. 
-<p> then run commands.,</p>
-    <p>  npx tailwindcss init </p>
+<p> then run commands,</p>
+To create a production bundle, use `npm run build` and for development run.
+    <p>  npx tailwindcss init  or you can use cloud cdn</p>
      <p> npm run build </p>
      <p> npm run watch </p>
   <h3> Happy hacking!!.</h3>
