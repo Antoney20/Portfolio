@@ -29,7 +29,7 @@
   <body>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
-     <!--header-->
+     <!--header section-->
     <header class="header-main" id="header">
     <!-- Navbar -->
     <nav class="relative container mx-auto p-6  fixed w-full top-0 " id="nav">
@@ -83,18 +83,14 @@
   <main class="main-section">
 
     <!-- Home  Section -->
-    <section class="home"  id="hero">
+    <section class="home"  id="home">
       <div
-        class="container flex flex-col items-center px-6 mx-auto mt-1 space-y-0 md:space-y-0 md:flex-row"
-      >
-        <!-- Left item -->
-        <div class="flex flex-col mb-32 space-y-12">
-          <h1
-            class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left typing-animation overflow-hidden"
-          >
-            Bring everyone together to build better software products.
-          </h1>
-
+        class="home_container bd-container bd-grid" >
+        <div class="home_data">
+          <h6 class="home_greeting">Hi there <span class="home_greetings"> 👋</span>, I'm</h6>
+          <h1 class="home_name">Muchiri Antony.</h1>
+            <h2>Bring everyone together to build better software products.</h2>
+        
         </div>
         <div class="md:w-1/2 flex flex-col mb-32 space-y-6" >
           <div class=" text-center text-dark flex flex-col ">
@@ -112,18 +108,16 @@
            
         </div>
       </div>
+      <a href="#about" class="scroll-down"></a>
     </section>
 
      <!--about me-->
-    <section id="about">
-      <!-- Flex container -->
+    <section class="about section bd-container" id="about">
+      <span class="section-subtitle">About</span>
       <div
-        class="container flex flex-col-reverse px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row " >
+        class="container flex flex-col-reverse px-4 mx-auto mt-0 space-y-12 md:space-y-0 md:flex-row " >
         <!-- about -->
         <div class="flex flex-col space-y-3 md:w-1/2 ">
-          <h2 class="max-w-md text-4xl font-bold  text-center md:text-left" id ="about">
-            About Me
-          </h2>
           <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
             <h3  class="text-base font-bold md:mb-2 center" >Who I Am </h3>
             I specialize in building mobile responsive front-end UI applications that connect with API’s and other backend technologies. 
@@ -136,140 +130,39 @@
 
     
         <div class="flex flex-col px-2 space-y-8 md:w-1/2" id="projects">
-          <div><h2 class="max-w-md text-4xl  mb-4  text-center md:text-center">Projects</h2>
-          <!-- List Item 1 -->
-          <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
-          >
-            <!-- Heading -->
-            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
-              <div class="flex items-center space-x-2">
-                <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
-                >
-                  01
-                </div>
-                <h3 class="text-base font-bold md:mb-4 md:hidden">
-                  Dynamic web application
-                </h3>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Dynamic web application
-              </h3>
-              <p class="text-darkGrayishBlue">
-               Created a dynamic web application using, django, react and mui.
-              </p>
-            </div>
-          </div>
-
-         
-          <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-            <!-- Heading -->
-            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
-              <div class="flex items-center space-x-2">
-                <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
-                >
-                  02
-                </div>
-                <h3 class="text-base font-bold md:mb-4 md:hidden">
-                  Real estate project
-                </h3>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Real estate project
-              </h3>
-              <p class="text-darkGrayishBlue">
-                A real estate project using Python django and bootstrap.
-         
-              </p>
-            </div>
-          </div>
-
-        
-          <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
-          >
-            <!-- Heading -->
-            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
-              <div class="flex items-center space-x-2">
-                <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
-                >
-                  03
-                </div>
-                <h3 class="text-base font-bold md:mb-4 md:hidden">
-                  Portfolio website
-                </h3>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Portfolio website
-              </h3>
-              <p >
-              here is the <a href="#"><u>Link </u></a>
-              </p>
-            </div>
+          <div><h2 class="max-w-md text-4xl  mb-4  text-center md:text-center">Skills</h2>
+    
+          <div class="skill-sec">
+            <h2 class="hello skl"><span>Skills<br></span></h2>
+            <ul class="skills">
+                <li class="skill">HTML</li>
+                <li class="skill">CSS</li>
+                <li class="skill">REACT</li>
+                <li class="skill">JAVASCRIPT</li>
+                <li class="skill">Bootstrap5</li>
+                <li class="skill">Git $ Github</li>
+                <li class="skill">Python</li>
+                <li class="skill">Django</li>
+                <li class="skill">Firebase</li>
+                <li class="skill">Mysql</li>
+                <li class="skill">SQL</li>
+                <li class="skill">PostgreSql</li> 
+                <li class="skill">Php</li>         
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- skills -->
-    <section id="">
-      <!-- Container to heading  -->
-      <div class="max-w-6xl px-5 mx-auto mt-2 text-center">
-        <!-- Heading -->
-        <h2 class="text-4xl font-bold text-center">
-        Skills stack
-        </h2>
-        <!-- Container -->
-        <div class="flex flex-col mt-10 md:flex-row md:space-x-6">
-         
-          <div class="grid grid-cols-6 gap-4 lg:grid-cols-6 md:grid-cols-4 md:gap-4">
-            <div class="bg-darkGray p-4 rounded-lg shadow transition-transform transform hover:scale-105 hover:bg-darkgray ">
-            <img src="./img/skills/django.png" alt="django" class="w-full h-auto"></div>
-            <div class=" p-4 rounded-lg shadow transition-transform transform hover:scale-105 hover:bg-darkgray">
-            <img src="./img/skills/tailwind.png" alt="tailwind" class="w-full h-auto"></div>
-            <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-            <img src="./img/skills/css.jpg" alt="css 3" class="w-full h-auto"></div>
-            <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-            <img src="./img/skills/python.png" alt="python" class="w-full h-auto"></div>
-            <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-            <img src="./img/skills/mysql.jpg" alt="mysql" class="w-full h-auto"></div>
-            <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-            <img src="./img/skills/react.jpg" alt="React" class="w-full h-auto"></div>  
-            <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-              <img src="./img/skills/firebase.png" alt="firebase" class="w-full h-auto"></div>
-              <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-              <img src="./img/skills/postgresql.jpg" alt="postgres" class="w-full h-auto"></div>
-              <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-              <img src="./img/skills/mui.png" alt="css 3" class="w-full h-auto"></div>
-              <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-              <img src="./img/skills/laravel.png" alt="laravel" class="w-full h-auto"></div>
-              <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-              <img src="./img/skills/git-github.png" alt="git" class="w-full h-auto"></div>
-              <div class="bg-white p-4 rounded-lg shadow transition-transform transform hover:scale-105">
-              <img src="./img/skills/kotlin.png" alt="Kotlin" class="w-full h-auto"></div>  
-                  
+    <section class="about section bd-container" id="about">
 
-          <div>
-          
+      
 
-        
-      </div>
+    </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Contact me Section -->
     <section class="contact section bd-container" id="contact">
       <!-- Flex Container -->
       <h2 class="section-title">Contact Me</h2>

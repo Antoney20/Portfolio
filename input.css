@@ -16,6 +16,7 @@
     --text-color: #524748;
     --first-color-light: #7b6f71;
     --first-color-lighten: #fbf9f9;
+    --first-color-dukl:rgb(192, 187, 187);
 
     /*===== Font and typography =====*/
 
@@ -262,7 +263,7 @@ img {
     row-gap: 2rem;
 }
 .home_data {
-    border-left: 4px solid var(--first-color-lighten);
+    border-left: 4px solid var(--first-color-dull);
     color: var(--first-color-lighten);
     padding-left: 1.5rem;
     z-index: var(--z-tooltip);
@@ -303,7 +304,7 @@ img {
     font-size: 0.813rem;
 }
 .home_greeting .home_greetings{
-    font-size: 20px;
+    font-size: 24px;
     animation: oscillate 2.5s infinite;
     transform-origin: 70% 70%;
 }
