@@ -9,6 +9,8 @@
       name="description" content="Muchiri Antony - portfolio website"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="css/main.css" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Muchiri Antony</title>
     <style>
       body.dark-mode {
@@ -16,6 +18,7 @@
         color: rgb(5, 5, 5);
         font-size: large;
         padding: 4px;
+
       }
   
       .dark-mode .toggle-btn {
@@ -24,14 +27,17 @@
     </style>
   </head>
   <body>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
+     <!--header-->
+    <header class="header-main" id="header">
     <!-- Navbar -->
     <nav class="relative container mx-auto p-6  fixed w-full top-0 " id="nav">
-      <!-- Flex container -->
+     
       <div class="flex items-center justify-between">
-        <!-- Logo -->
+        <!-- Logo or name -->
         <div class="pt-2">
-          <img src="img/logo.svg" alt="" />
+          <a class="text-3xl font-bold" href="#">Muchiri Antony</a>
         </div>
         <!-- Menu Items -->
         <div class=" hidden space-x-6 md:flex">
@@ -71,10 +77,13 @@
         </div>
       </div>
     </nav>
+  </header>
+  
+    <!-- main section -->
+  <main class="main-section">
 
-    <!-- Hero Section -->
-    <section id="hero">
-      <!-- Flex Container -->
+    <!-- Home  Section -->
+    <section class="home"  id="hero">
       <div
         class="container flex flex-col items-center px-6 mx-auto mt-1 space-y-0 md:space-y-0 md:flex-row"
       >
@@ -106,7 +115,7 @@
     </section>
 
      <!--about me-->
-    <section id="features">
+    <section id="about">
       <!-- Flex container -->
       <div
         class="container flex flex-col-reverse px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row " >
@@ -216,7 +225,7 @@
     </section>
 
     <!-- skills -->
-    <section id="section2">
+    <section id="">
       <!-- Container to heading  -->
       <div class="max-w-6xl px-5 mx-auto mt-2 text-center">
         <!-- Heading -->
@@ -261,30 +270,65 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="cta">
+    <section class="contact section bd-container" id="contact">
       <!-- Flex Container -->
-      <div
-        class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
-      >
-        <!-- Heading -->
-        <h2
-          class="text-5xl font-bold text-center md:text-4xl md:max-w-xl md:text-left"
-        >
-        Contact me
-        </h2>
-        <!-- Button -->
-        <div>
-          <a
-            href="#"
-            class="p-3 px-6 pt-2 text-brightRed bg-gray-300 rounded-full shadow-2xl baseline hover:bg-gray-600"
-            >Say hello</a
-          >
-        </div>
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact_container bd-grid">
+
+          <div class="contact_content bd-grid">
+
+              <div class="contact_box">
+                  <i class='bx bx-home contact_icon'></i>
+                  <h3 class="contact_title">Location</h3>
+                  <span class="contact_description">Nairobi, Kenya</span>
+              </div>
+
+              <div class="contact_box">
+                  <i class='bx bx-phone contact_icon'></i>
+                  <h3 class="contact_title">Phone</h3>
+                  <span class="contact_description">+254748181420</span>
+              </div>
+
+              <div class="contact_box">
+                  <i class='bx bx-envelope contact_icon'></i>
+                  <h3 class="contact_title">Gmail</h3>
+                  <span class="contact_description">antomutwiri2001@gmail.com</span>
+              </div>
+
+              <div class="contact_box">
+                  <i class='bx bx-chat contact_icon'></i>
+                  <h3 class="contact_title">Chat</h3>
+                  <div>
+                      <a href="#" class="contact_social"><i class='bx bxl-whatsapp-square'></i></a>
+                      <a href="#" class="contact_social"><i class='bx bxl-messenger'></i></a>
+                      <a href="#" class="contact_social"><i class='bx bxl-twitter'></i></a>
+                  </div>
+              </div>
+          </div>
+          <form action="#" method="POST" class="contact_form" id="my-form">
+              <div class="contact_inputs">
+                  <input type="text" name="name" placeholder="Name" class="contact_input">
+                  <input type="email" name="emailaddress" placeholder="Email" class="contact_input">
+              </div>
+
+              <div class="contact_inputs">
+                  <input type="text" name="project" placeholder="Project" class="contact_input">
+                  <input type="number" name="mobile" placeholder="Number" class="contact_input">
+              </div>
+
+              <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact_input"></textarea>
+
+              <input type="submit" name="message" value="Send Message" class="button contact_button">
+          </form>
+      </div>
+      <div id="status"></div>
       </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-veryDarkBlue" id="cta">
+    <footer class="bg-veryDarkBlue" id="footer">
       <!-- Flex Container -->
       <div
         class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
