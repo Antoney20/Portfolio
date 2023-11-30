@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description" content="Muchiri Antony - portfolio website"/>
+    <meta name="description" content="Muchiri Antony - portfolio website"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="css/main.css" />
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
 
     <title>Muchiri Antony</title>
     <style>
@@ -20,7 +19,6 @@
         padding: 4px;
 
       }
-  
       .dark-mode .toggle-btn {
         background-color: #2c3e50;
       }
@@ -28,8 +26,6 @@
   </head>
   <body>
 
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-     <!--header section-->
     <header class="header-main" id="header">
     <!-- Navbar -->
     <nav class="relative container mx-auto p-6  fixed w-full top-0 " id="nav">
@@ -42,10 +38,10 @@
         <!-- Menu Items -->
         <div class=" hidden space-x-6 md:flex">
           <a href="#" class="hover:text-darkGrayishBlue">Home</a>
-          <a href="#About" class="hover:text-darkGrayishBlue">About</a>
-          <a href="#projects" class="hover:text-darkGrayishBlue">Projects</a>
-          <a href="#section2" class="hover:text-darkGrayishBlue">Skills</a>
-          <a href="#cta" class="hover:text-darkGrayishBlue">Contact</a>
+          <a href="#about" class="hover:text-darkGrayishBlue">About</a>
+          <a href="#about" class="hover:text-darkGrayishBlue">Skills</a>
+          <a href="#portfolio" class="hover:text-darkGrayishBlue">Projects</a>
+          <a href="#contact" class="hover:text-darkGrayishBlue">Contact</a>
         
         </div>
         <button id="toggleButton" class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
@@ -88,23 +84,18 @@
         class="home_container bd-container bd-grid" >
         <div class="home_data">
           <h6 class="home_greeting">Hi there <span class="home_greetings"> 👋</span>, I'm</h6>
-          <h1 class="home_name">Muchiri Antony.</h1>
+          <h1 class="home_name">Muchiri Antony M.</h1>
+          <span class="home_profession"> AM A SOFTWARE ENGINEER</span>
             <h2>Bring everyone together to build better software products.</h2>
         
         </div>
-        <div class="md:w-1/2 flex flex-col mb-32 space-y-6" >
+        <div class="md:w-1/2 flex flex-col space-y-6" >
           <div class=" text-center text-dark flex flex-col ">
           <p class="max-w-sm px-10 mt-1">
             Hi t Manage makes it simple for software teams to plan day-to-day tasks
              while keeping the larger team goals in view.
            </p>
           </div>
-          <div class="flex justify-center md:justify-center ">
-             <span
-               href="#"
-               class="p-3 mb-10 px-10 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-               >Software Engineer</span>
-           </div>
            
         </div>
       </div>
@@ -129,43 +120,141 @@
         </div>
 
     
-        <div class="flex flex-col px-2 space-y-8 md:w-1/2" id="projects">
-          <div><h2 class="max-w-md text-4xl  mb-4  text-center md:text-center">Skills</h2>
-    
+        <div class="flex flex-col " id="skills">
           <div class="skill-sec">
             <h2 class="hello skl"><span>Skills<br></span></h2>
             <ul class="skills">
-                <li class="skill">HTML</li>
-                <li class="skill">CSS</li>
+                <li class="skill">HTML, CSS & JS</li>
+                <li class="skill">Php</li>   
                 <li class="skill">REACT</li>
-                <li class="skill">JAVASCRIPT</li>
                 <li class="skill">Bootstrap5</li>
-                <li class="skill">Git $ Github</li>
+                <li class="skill">Git & Github</li>
                 <li class="skill">Python</li>
                 <li class="skill">Django</li>
                 <li class="skill">Firebase</li>
                 <li class="skill">Mysql</li>
                 <li class="skill">SQL</li>
-                <li class="skill">PostgreSql</li> 
-                <li class="skill">Php</li>         
+                <li class="skill">PostgreSql</li>   
+                <li class="skill">UI/UX Design</li>   
+                <li class="skill">Docker</li>
+                <li class="skill">DRF</li>  
+                <li class="skill">Machine Learning</li>    
+                <li class="skill">Software Dev</li>  
+                <li class="skill">API’s</li>       
             </ul>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- skills -->
-    <section class="about section bd-container" id="about">
 
-      
+        <!-- PORTFOLIO SECTION -->
+        <section class="portfolio section bd-container" id="portfolio">
+          <span class="section-subtitle">My recent works</span>
+          <div class="portfolio_nav">
+              <span class="portfolio_item active-portfolio" data-filter=".all ">All</span>
+              <span class="portfolio_item" data-filter=".web">Web</span>
+              <span class="portfolio_item" data-filter=".ux">ML</span>
+              <span class="portfolio_item" data-filter=".app">App</span>
+              <span class="portfolio_item" data-filter=".app">API’s</span>
+          </div>
 
-    </div>
-    </section>
+          <div class="portfolio_container bd-grid">
+              <div class="portfolio_content mix ml all">
+                  <a href="#"><img src="images/work3.jpg" alt="" class="portfolio_img"></a>
+                  <div class="portfolio_data">
+                      <span class="portfolio_subtitle">Machine Learning</span>
+                      <a href="#">
+                          <h2 class="portfolio_title">Facial recognition system</h2>
+                      </a>
+                      <div class="arrow">
+                          <a href="#"
+                              class="button button-link">View Details</a>
+                          <i class='bx bx-right-arrow-alt project_arrow'></i>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="portfolio_content mix ux all">
+                  <a href="#"><img src="images/work2.jpg" alt="" class="portfolio_img"></a>
+                  <div class="portfolio_data">
+                      <span class="portfolio_subtitle">app</span>
+                      <a href="#">
+                          <h2 class="portfolio_title">Simple Notes app using Firebase and cloud firestore</h2>
+                      </a>
+                      <div class="arrow">
+                          <a href="https://www.behance.net/gallery/115939649/Food-Delivery-app"
+                              class="button button-link">View Details</a>
+                          <i class='bx bx-right-arrow-alt project_arrow'></i>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="portfolio_content mix web all">
+                  <a href="#"><img src="#" alt="" class="portfolio_img"></a>
+                  <div class="portfolio_data">
+                      <span class="portfolio_subtitle">Web</span>
+                      <a href="#">
+                          <h2 class="portfolio_title">Dynamic web appication</h2>
+                      </a>
+                      <div class="arrow">
+                          <a href="https://tony-muchiri.netlify.app/"
+                              class="button button-link">View Details</a>
+                          <i class='bx bx-right-arrow-alt project_arrow'></i>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="portfolio_content mix web all">
+                  <a href="#"><img src="images/Fiber-landing-page.jpeg" alt="" class="portfolio_img"></a>
+                  <div class="portfolio_data">
+                      <span class="portfolio_subtitle">Web design</span>
+                      <a href="#">
+                          <h2 class="portfolio_title">Real Estate project</h2>
+                      </a>
+                      <div class="arrow">
+                          <a href="https://fiberlandingpage.netlify.app/"
+                              class="button button-link">View Details</a>
+                          <i class='bx bx-right-arrow-alt project_arrow'></i>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="portfolio_content mix web all">
+                  <a href="#"><img src="images/IndieBrew-Landing-page.jpeg" alt="" class="portfolio_img"></a>
+                  <div class="portfolio_data">
+                      <span class="portfolio_subtitle">API’s</span>
+                      <a href="#">
+                          <h2 class="portfolio_title">Working with Mpesa Daraja API’s</h2>
+                      </a>
+                      <div class="arrow">
+                          <a href=""
+                              class="button button-link">View Details</a>
+                          <i class='bx bx-right-arrow-alt project_arrow'></i>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="portfolio_content mix web all">
+                  <a href="#"><img src="" alt="" class="portfolio_img"></a>
+                  <div class="portfolio_data">
+                      <span class="portfolio_subtitle">Web design</span>
+                      <a href="#">
+                          <h2 class="portfolio_title">Personal Portfolio</h2>
+                      </a>
+                      <div class="arrow">
+                          <a href="#"
+                              class="button button-link">View Details</a>
+                          <i class='bx bx-right-arrow-alt project_arrow'></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
     <!-- Contact me Section -->
     <section class="contact section bd-container" id="contact">
       <!-- Flex Container -->
-      <h2 class="section-title">Contact Me</h2>
+      <h2 class="section-subtitle">Contact Me</h2>
 
       <div class="contact_container bd-grid">
 
@@ -210,7 +299,7 @@
                   <input type="number" name="mobile" placeholder="Number" class="contact_input">
               </div>
 
-              <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact_input"></textarea>
+              <textarea name="" id="" cols="0" rows="3" placeholder="Message" class="contact_input"></textarea>
 
               <input type="submit" name="message" value="Send Message" class="button contact_button">
           </form>
