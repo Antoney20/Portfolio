@@ -570,6 +570,9 @@ img {
         width: 450px;
         justify-self: center;
     }
+    #footerform{
+        width: 200px;
+    }
 }
 
 @media screen and (min-width: 768px) {
