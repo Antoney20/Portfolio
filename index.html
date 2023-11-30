@@ -145,9 +145,9 @@
           <div class="portfolio_nav">
               <span class="portfolio_item active-portfolio" data-filter=".all ">All</span>
               <span class="portfolio_item" data-filter=".web">Web</span>
-              <span class="portfolio_item" data-filter=".ux">ML</span>
+              <span class="portfolio_item" data-filter=".ml">ML</span>
               <span class="portfolio_item" data-filter=".app">App</span>
-              <span class="portfolio_item" data-filter=".app">API’s</span>
+              <span class="portfolio_item" data-filter=".api">API’s</span>
           </div>
 
           <div class="portfolio_container bd-grid">
@@ -381,6 +381,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script>
       const body = document.body;
       const toggleButton = document.getElementById('toggleButton');
@@ -388,6 +390,29 @@
       toggleButton.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
       });
+
+        $(document).ready(function() {
+          
+          $(".portfolio_nav span").click(function() {
+            // Remove the 'active-portfolio' class from all items
+            $(".portfolio_nav span").removeClass("active-portfolio");
+            // Add the 'active-portfolio' class to the clicked item
+            $(this).addClass("active-portfolio");
+      
+            // Get the filter value from the clicked item's data attribute
+            var filterValue = $(this).data("filter");
+      
+            // Show/hide portfolio items based on the filter
+            if (filterValue === ".all") {
+              $(".portfolio_content").show();
+            } else {
+              $(".portfolio_content").hide();
+              $(filterValue).show();
+            }
+          });
+        });
+    
+      
     </script>
 
     <script src="js/script.js"></script>
