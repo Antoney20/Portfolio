@@ -1022,7 +1022,7 @@ img {
 
 .home_container {
   position: relative;
-  min-height: calc(800px - var(--header-height));
+  min-height: calc(800 - var(--header-height));
   height: calc(100vh - var(--header-height));
   grid-template-rows: repeat(2, -webkit-max-content);
   grid-template-rows: repeat(2, max-content);
@@ -1821,6 +1821,30 @@ img {
 
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  font-weight: bold;
+  background-color: #c0c0c0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+  margin-top: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.menu-item {
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #a0a0a0;
 }
 
 .hover\:bg-brightRedLight:hover {

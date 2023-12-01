@@ -64,13 +64,12 @@
           id="menu"
           class="absolute flex-col items-center hidden self-end py-8 mt-6 space-y-6 font-bold bg-gray-200 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
         >
-          <a href="#">Home</a>
-          <a href="#Resume">About</a>
-          <a href="#about" class="hover:text-darkGrayishBlue">Skills</a>
-          <a href="#portfolio">Projects</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Contact</a>
-          <a target="_blank" href="https://docs.google.com/document/d/1HQX8sL19LZdSjOgNBw6E1LmQi7R6KovleNhezlEwUsk/edit?usp=sharing" class="hover:text-brightRed">Resume</a>
+          <a  class="menu-item" data-target="home" href="#">Home</a>
+          <a  class="menu-item" data-target="about" href="#Resume">About</a>
+          <a  class="menu-item" data-target="skills" href="#about" class="hover:text-darkGrayishBlue">Skills</a>
+          <a  class="menu-item" data-target="portfolio" href="#portfolio">Projects</a>
+          <a  class="menu-item" data-target="contact" href="#contact">Contact</a>
+          <a   class="menu-item" target="_blank" href="https://docs.google.com/document/d/1HQX8sL19LZdSjOgNBw6E1LmQi7R6KovleNhezlEwUsk/edit?usp=sharing" class="hover:text-brightRed">Resume</a>
         </div>
       </div>
     </nav>
@@ -412,6 +411,30 @@
             }
           });
         });
+
+
+      // responsive mobile menu.
+      $(document).ready(function() {
+        // Toggle the menu visibility on hamburger icon click
+        $("#menu-btn").click(function() {
+          $("#menu").toggle();
+        });
+    
+        // When a menu item is clicked
+        $(".menu-item").click(function() {
+          // Close the menu on small devices
+          $("#menu").hide();
+    
+          // Get the target section from the data attribute
+          var targetSection = $(this).data("target");
+    
+          // Scroll to the target section
+          $("html, body").animate({
+            scrollTop: $("#" + targetSection).offset().top
+          }, 800); // Adjust the speed as needed
+        });
+      });
+    
     
       
     </script>
