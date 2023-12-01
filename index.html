@@ -461,7 +461,7 @@ contactForm.addEventListener('submit', (event) => {
   };
 
   // Send form data to the Vercel Function
-  fetch('/api/contact', {
+  fetch('api/contact.js', {
     method: 'POST', // Set the request method to POST
     headers: {
       'Content-Type': 'application/json',
