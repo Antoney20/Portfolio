@@ -166,10 +166,12 @@ img {
 .home {
   background-color: #383636;
   background-image: url('./img/interior.jpg');
+  
  
 }
 .home_container {
     position: relative;
+    min-height: calc(800px - var(--header-height));
     height: calc(100vh - var(--header-height));
     grid-template-rows: repeat(2, max-content);
     align-content: space-around;
