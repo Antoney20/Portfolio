@@ -446,7 +446,6 @@
         });
       });
 // get form data
-
 const contactForm = document.getElementById('my-form');
 
 contactForm.addEventListener('submit', (event) => {
@@ -462,8 +461,8 @@ contactForm.addEventListener('submit', (event) => {
   };
 
   // Send form data to the Vercel Function
-  fetch('./api/contact.js', {
-    method: 'POST',
+  fetch('/api/submit-form', {
+    method: 'POST', // Set the request method to POST
     headers: {
       'Content-Type': 'application/json',
     },
@@ -485,6 +484,7 @@ contactForm.addEventListener('submit', (event) => {
       alert('An error occurred. Please try again.');
     });
 });
+
     
       
     </script>
