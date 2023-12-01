@@ -6,3 +6,7 @@ btn.addEventListener('click', () => {
   nav.classList.toggle('flex')
   nav.classList.toggle('hidden')
 })
+
+// get form data
+
+

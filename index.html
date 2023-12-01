@@ -15,7 +15,8 @@
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Muchiri Antony">
-    <meta property="og:description" content="antoney20 - Portfolio website">
+    <meta property="og:description" content="Antoney20 - Portfolio website">
+    <meta property="og:description" content="Muchiri Antony M. Software Engineer">
     <meta property="og:url" content="https://antoney20.vercel.app/">
     <meta property="og:type" content="Portfolio website">
     <meta property="og:site_name" content="Muchiri Antony M.">
@@ -246,7 +247,7 @@
                           <h3>Using TailwindCSS and JS<h3>
                       </a>
                       <div class="arrow">
-                          <a href="https://portfolio-seven-sigma-59.vercel.app/"
+                          <a href="https://antoney20.vercel.app/"
                               class="button button-link">View Details</a>
                           <i class='bx bx-right-arrow-alt project_arrow'></i>
                       </div>
@@ -299,8 +300,8 @@
               </div>
 
               <div class="contact_inputs">
-                  <input type="text" name="project" placeholder="Project" class="contact_input">
-                  <input type="number" name="mobile" placeholder="Number" class="contact_input">
+                  <input type="text" name="subject" placeholder="subject" class="contact_input">
+                  <input type="tel" name="mobile" placeholder=" Phone Number" class="contact_input">
               </div>
 
               <textarea name="" id="" cols="0" rows="3" placeholder="Message" class="contact_input"></textarea>
@@ -444,7 +445,46 @@
           }, 800); // Adjust the speed as needed
         });
       });
-    
+// get form data
+
+const contactForm = document.getElementById('my-form');
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  // Collect form data
+  const formData = {
+    name: contactForm.elements.name.value,
+    emailaddress: contactForm.elements.emailaddress.value,
+    subject: contactForm.elements.subject.value,
+    mobile: contactForm.elements.mobile.value,
+    message: contactForm.elements.message.value,
+  };
+
+  // Send form data to the Vercel Function
+  fetch('./api/contact.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.message === 'Form submitted successfully') {
+        // Successfully submitted, reset form and show success message
+        contactForm.reset();
+        alert('Your message has been sent!');
+      } else {
+        // Error occurred, show error message
+        alert('An error occurred. Please try again.');
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      alert('An error occurred. Please try again.');
+    });
+});
     
       
     </script>
