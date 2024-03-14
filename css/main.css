@@ -457,53 +457,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::-webkit-backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
 ::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -843,9 +796,9 @@ video {
 }
 
 .transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1003,7 +956,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #010101;
+  background-color: #f0e0e0;
 }
 
 /* Nav styling */
@@ -1024,7 +977,6 @@ img {
   position: relative;
   min-height: calc(800 - var(--header-height));
   height: calc(100vh - var(--header-height));
-  grid-template-rows: repeat(2, -webkit-max-content);
   grid-template-rows: repeat(2, max-content);
   align-content: space-around;
   row-gap: 2rem;
@@ -1052,15 +1004,8 @@ img {
   /* text-fill-color: transparent; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: textclip 3.5s linear infinite;
-          animation: textclip 3.5s linear infinite;
+  animation: textclip 3.5s linear infinite;
   display: inline-block;
-}
-
-@-webkit-keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
 }
 
 @keyframes textclip {
@@ -1084,43 +1029,8 @@ img {
 
 .home_greeting .home_greetings{
   font-size: 24px;
-  -webkit-animation: oscillate 2.5s infinite;
-          animation: oscillate 2.5s infinite;
+  animation: oscillate 2.5s infinite;
   transform-origin: 70% 70%;
-}
-
-@-webkit-keyframes oscillate{
-  0%{
-    transform: rotate(0deg);
-  }
-
-  10%{
-    transform: rotate(14deg);
-  }
-
-  20%{
-    transform: rotate(-8deg);
-  }
-
-  30%{
-    transform: rotate(14deg);
-  }
-
-  40%{
-    transform: rotate(-4deg);
-  }
-
-  50%{
-    transform: rotate(10deg);
-  }
-
-  60%{
-    transform: rotate(0deg);
-  }
-
-  100%{
-    transform: rotate(0deg);
-  }
 }
 
 @keyframes oscillate{
@@ -1170,21 +1080,10 @@ img {
 
 .home_img img {
   width: 240px;
-  -webkit-animation: move 2s infinite ease-in-out alternate;
-          animation: move 2s infinite ease-in-out alternate;
+  animation: move 2s infinite ease-in-out alternate;
 }
 
 /* Hero image hover effect */
-
-@-webkit-keyframes move{
-  from{
-    transform: translateY(0px);
-  }
-
-  to{
-    transform: translateY(-20px);
-  }
-}
 
 @keyframes move{
   from{
@@ -1479,15 +1378,13 @@ img {
   justify-content: center;
   background-color: #2f0a0d;
   color: #fff;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
+  animation: status 4s ease forwards;
 }
 
 #status.error {
   background-color: #dd0e1f;
   color: #fff;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
+  animation: status 4s ease forwards;
 }
 
 #status {
@@ -1497,23 +1394,6 @@ img {
   padding: 10px;
   margin: 0 auto;
   border-radius: 8px;
-}
-
-@-webkit-keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
 }
 
 @keyframes status {
@@ -1584,7 +1464,6 @@ img {
 
   .home_container {
     height: 100vh;
-    grid-template-rows: -webkit-max-content 0.5fr;
     grid-template-rows: max-content 0.5fr;
     align-content: flex-end;
   }
@@ -1667,8 +1546,7 @@ img {
     transform: translate(-50%, -100%) rotate(45deg);
     border-top: transparent;
     border-left: transparent;
-    -webkit-animation: scroll-down 1s ease-in-out infinite;
-            animation: scroll-down 1s ease-in-out infinite;
+    animation: scroll-down 1s ease-in-out infinite;
   }
 
   .about_container {
@@ -1725,30 +1603,10 @@ img {
 
   .scroll-down::after {
     top: 30%;
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
+    animation-delay: 0.3s;
   }
 
   /* Key frames for the scroll button */
-
-  @-webkit-keyframes scroll-down {
-    0% {
-      opacity: 0;
-    }
-
-    30% {
-      opacity: 1;
-    }
-
-    60% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      top: 90%;
-    }
-  }
 
   @keyframes scroll-down {
     0% {
