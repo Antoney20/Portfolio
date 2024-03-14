@@ -1003,7 +1003,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #f0e0e0;
+  background-color: #010101;
 }
 
 /* Nav styling */
